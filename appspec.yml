@@ -1,5 +1,5 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
   - source: /app
     destination: /var/www/phplaravel/app/
@@ -43,9 +43,6 @@ files:
     destination: /var/www/phplaravel/
 hooks:
   AfterInstall:
-    - location: scripts/install_dependencies
-      timeout: 900
-      runas: root
     - location: scripts/start_server
       timeout: 300
       runas: root
